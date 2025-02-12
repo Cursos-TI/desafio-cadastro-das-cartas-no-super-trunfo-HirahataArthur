@@ -1,22 +1,34 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    printf("Desafio Super Trunfo - Países \n");//titulo
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
+    char nome_ci[5]; //declaração da variável para o nome da cidade
+    float pop;  //declaração da variável para a população
+    float area;//declaração da variável para a área
+    float pib; //declaração da variável para o PIB
+    int pontos_tu; //declaração da variável para os pontos turísticos
+
+    printf("Insira o nome da  cidade a ser adicionado:\n"); 
+    scanf("%20s", nome_ci); //entrada do nome da cidade
+
+    printf("Insira a população (em milhões) da cidade:\n"); 
+    scanf("%f", &pop); //entrada da população 
+
+    printf("Insira a área territorial (em quilometros quadrados; km²) da cidade:\n");
+    scanf("%f", &area); //entrada da área territorial da cidade
+
+    printf("Insira o PIB (em milhões) da cidade:\n"); 
+    scanf("%f", &pib); //entrada dp PIB da cidade
+
+    printf("Insira o números de pontos turísticos da cidade:\n");
+    scanf("%d", &pontos_tu); //entrada do número de pontos turísticos da cidade
+
+    printf("\n \n \n Nome da cidade: %s  \n População: %f  \n", nome_ci, pop); 
+    printf("Área territorial: %f  \n", area);
+    printf("PIB: %f  \n ", pib);
+    printf("Pontos turísticos totais da cidade: %d \n \n", pontos_tu);
+            //saída impressa dos dados fornecidos pelo usuário
     return 0;
 }
