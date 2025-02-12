@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    printf("Desafio Super Trunfo - Países \n");//titulo
+    printf("Desafio Super Trunfo Novato - Países \n");//titulo
     
 
     char nome_ci[5]; //declaração da variável para o nome da cidade
