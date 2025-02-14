@@ -18,7 +18,7 @@ int main() {
 
 
     printf("Insira o nome da  cidade a ser adicionada:\n"); 
-    scanf("%20s", nome_ci); //entrada do nome da cidade
+    scanf("%[^\n]", nome_ci); //entrada do nome da cidade
 
     printf("Insira o código da cidade (Ex: A01, A02): \n");
     scanf("%20s", code);
@@ -64,10 +64,10 @@ int main() {
     float pib_per_capita2;//variável do PIB per capita
 
     printf("Insira o nome da  cidade a ser adicionada:\n"); 
-    scanf("%20s", &nome_ci2); //entrada do nome da cidade
+    scanf("%[^\n]", nome_ci2); //entrada do nome da cidade
 
     printf("Insira o código da cidade (Ex: A01, A02): \n");
-    scanf("%20s", &code2);
+    scanf("%20s", code2);
 
     printf("Insira a população da cidade:\n"); 
     scanf("%d", &pop2); //entrada da população 
@@ -87,7 +87,7 @@ int main() {
     pib_per_capita2 = pib2 / pop2;
     super_poder2 = pib2 + area2 + pop2 + pontos_tu2;
 
-    printf("\n \nCarta 2 \n \n Nome da cidade: %s  \n População: %.d  habitantes.\n", nome_ci2, pop2);
+    printf("\n \nCarta 2 \n \n Nome da cidade: %s  \n População: %d  habitantes.\n", nome_ci2, pop2);
     printf("Código da cidade: %s \n", code2);  
     printf("Área territorial: %.2f km². \n", area2);
     printf("PIB: R$%.3f.\n ", pib2);
@@ -100,7 +100,7 @@ int main() {
     int resposta;
 
     printf("Comparar as cartas 1 e 2?\n Digite 1 para 'sim' e 0 para 'não'. \n");
-    scanf("%d\n\n", &resposta);
+    scanf("%d", &resposta);
     if (resposta == 1){
         if (pop > pop2)
         {
@@ -146,7 +146,7 @@ int main() {
             printf("PIB da cidade de %s: \n R$%.2f\n", nome_ci, pib);
             printf("PIB da cidade de %s: \n R$%.2f\n\n", nome_ci2, pib2);
         }
-        if (pib > pib2)
+        if (pib < pib2)
         {
             printf("A cidade de %s leva vantagem sobre a cidade de %s em seu PIB.\n", nome_ci2, nome_ci);
             printf("PIB da cidade de %s: \n R$%.2f\n", nome_ci2, pib2);
