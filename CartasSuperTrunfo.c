@@ -64,6 +64,7 @@ int main() {
     float pib_per_capita2;//variável do PIB per capita
 
     printf("Insira o nome da  cidade a ser adicionada:\n"); 
+    getchar();
     scanf("%[^\n]", nome_ci2); //entrada do nome da cidade
 
     printf("Insira o código da cidade (Ex: A01, A02): \n");
